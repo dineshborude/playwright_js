@@ -1,11 +1,13 @@
-const { test } = require('@playwright/test');
+const test = require(`@playwright/test`);
 
+test('My First Test', async ({browser}) => {
 
-test('Launch Browser', async ({browser}) => {
+    const context = await browser.newContext();
 
-    const page = await browser.newPage();
-    await page.goto('https://www.google.com');
+    const page1 = await context.newPage();
 
-    console.log("Browser Launched Successfully");
+    await page1.goto("https://google.com");
 
-})
+    
+
+});
