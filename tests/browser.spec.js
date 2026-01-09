@@ -1,13 +1,15 @@
 const test = require(`@playwright/test`);
 
-test('My First Test', async ({browser}) => {
+test('login page validations', async ({page}) => {
 
-    const context = await browser.newContext();
+    await page.goto('https://rahulshettyacademy.com/loginpagePractise/');
+    console.log(await page.title());
 
-    const page1 = await context.newPage();
-
-    await page1.goto("https://google.com");
-
+    await page.locator('#username').fill('rahulshettyacademy');
+    await page.locator('#password').fill('learning');
+    await page.locator('[type="checkbox"]').check();
+    await page.locator('[type="submit"]').click();
+    
     
 
-});
+})
