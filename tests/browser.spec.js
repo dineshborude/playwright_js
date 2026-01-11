@@ -10,6 +10,8 @@ test('login page validations', async ({page}) => {
     await page.locator('[type="checkbox"]').check();
     await page.locator('[type="submit"]').click();
     
+
+    
     
 
 })
