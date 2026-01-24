@@ -12,7 +12,14 @@ test.only('select product', async({page}) => {
     await password.fill('Learning@830$3mK2');
     await signInButton.click();
 
-    const phone = await page.locator('.card-title>a').nth(0).allTextContents());
+    await page.waitForTimeout(10000)
+    const phone = await page.locator('.card-title>a').allTextContents();
+    console.log(phone)
+    const phone2 = await page.locator('.card-title>a').textContent();
+
+    console.log(phone)
+    console.log(phone2);
+
 
 
 })
