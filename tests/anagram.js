@@ -17,7 +17,6 @@ function isAnagram(str,str2) {
        
     }
 
-
     for(let [key,value] of map) {
 
         if(value!==0) {
@@ -27,7 +26,6 @@ function isAnagram(str,str2) {
     }
 
     return true;
-
 }
 
 console.log(isAnagram(str,str2))
