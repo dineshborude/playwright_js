@@ -1,8 +1,6 @@
 let map = new Map();
 
-map.set("Rahul", 30);
-map.set("Pravin", 31);
-map.set("Akash", 45)
+
 
 console.log(map);
 
@@ -19,4 +17,7 @@ function filterByAge(map,age) {
 
 }
 
-console.log(filterByAge(map,40));
+let arr = [...map];
+console.log(arr[1][1]);
+
+// console.log(filterByAge(map,40));
